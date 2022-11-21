@@ -49,4 +49,11 @@ WorkExperience.belongsTo(User, {
   onDelete: "cascade",
 });
 
-module.exports = { User, Post, Comment };
+module.exports = {
+  User,
+  ContactInfo,
+  Education,
+  Skills,
+  Summary,
+  WorkExperience,
+};
