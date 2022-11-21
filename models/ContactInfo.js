@@ -15,7 +15,7 @@ ContactInfo.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Zip_Code: {
+    Name: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
