@@ -1,0 +1,7 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS resume_db;
+
+-- CREATE DATABASE
+CREATE DATABASE resume_db;
+
+USE resume_db;
