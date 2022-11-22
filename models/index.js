@@ -4,8 +4,13 @@ const Education = require("./Education");
 const Skills = require("./Skills");
 const Summary = require("./Summary");
 const WorkExperience = require("./WorkExperience");
+const Resume = require("./Resume");
 
 //create associations
+User.hasMany(Resume, {
+  foreignKey: "user_id",
+  onDelete: "cascade",
+});
 User.hasMany(ContactInfo, {
   foreignKey: "user_id",
   onDelete: "cascade",
@@ -56,4 +61,5 @@ module.exports = {
   Skills,
   Summary,
   WorkExperience,
+  Resume,
 };

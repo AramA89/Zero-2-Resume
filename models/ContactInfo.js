@@ -15,10 +15,6 @@ ContactInfo.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Name: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     City: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,7 +27,7 @@ ContactInfo.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    email: {
+    Alt_email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
