@@ -7,6 +7,7 @@
       type="text"
       autofocus="true"
       class="form-input"
+      placeholder="User Name"
     />
 
     <label class="form-label" for="password-login">Password</label>
@@ -15,11 +16,23 @@
       type="password"
       autofocus="true"
       class="form-input"
+      placeholder="Password"
     />
 
     <button type="submit" class="btn">Login!</button>
-    <h1>Don't have an account ?</h1>
-    <a class="login-link" href="/signup">Sign up NOW</a>
+
+
+    
+     <div class="message">
+      <div class="danger" id="danger">Incorrect username or password.</div>
+      <div class="success" id="success">Login successfully!</div>
+    </div>
+
+
+
+    <button class="button is-primary is-outlined">
+      <a class="login-link" href="/signup">Don't have an account ? Sign up Now!</a>
+    </button>
   </form>
 </div>
 

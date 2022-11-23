@@ -1,6 +1,8 @@
 async function loginFormHandler(event) {
   event.preventDefault();
 
+  const success = document.getElementById("success");
+  const danger = document.getElementById("danger");
   const username = document.querySelector("#username-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
 
@@ -15,9 +17,11 @@ async function loginFormHandler(event) {
     });
 
     if (response.ok) {
+      danger.style.display = "none";
+      success.style.display = "block";
       document.location.replace("/dashboard");
     } else {
-      alert("Please signup");
+      danger.style.display = "block";
     }
   }
 }
