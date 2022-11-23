@@ -74,6 +74,10 @@ router.get("/:id", (req, res) => {
           "created_at",
         ],
       },
+      {
+        model: Summary,
+        attributes: ["id", "Summary", "created_at"],
+      },
     ],
   })
     .then((dbUserData) => {
