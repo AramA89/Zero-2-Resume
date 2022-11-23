@@ -1,20 +1,16 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-const indexRoutes = require('./api/index');
-const loginRoutes = require('./loginRoutes');
-const logoutRoutes = require('./logoutRoutes');
-const saveRoutes = require('./saveRoutes');
-const signupRoutes = require('./signupRoutes');
+const homeRoutes = require('./homeRoutes');
+// const saveRoutes = require('./saveRoutes');
 const editRoutes = require('./editRoutes');
 const addResumeRoutes = require('./addResumeRoutes');
+const deleteResumeRoutes = require('./deleteResumeRoutes');
 
-router.use('/', indexRoutes);
+router.use('/', homeRoutes)
 router.use('/api', apiRoutes);
-router.use('/login', loginRoutes);
-router.use('/logout', logoutRoutes);
-router.use('/save', saveRoutes);
-router.use('/signup', signupRoutes);
+// router.use('/save', saveRoutes);
 router.use('/edit', editRoutes);
 router.use('/addresume', addResumeRoutes);
+router.use('/deleteresume', deleteResumeRoutes);
 
 module.exports = router;
