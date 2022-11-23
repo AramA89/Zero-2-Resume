@@ -98,6 +98,7 @@ router.post("/", (req, res) => {
     email: req.body.email,
     username: req.body.username,
     password: req.body.password,
+    confirmPassword: req.body.confirmPassword,
   })
     // store user data during session
     .then((dbUserData) => {
@@ -105,6 +106,7 @@ router.post("/", (req, res) => {
         req.session.user_id = dbUserData.id;
         req.session.email = dbUserData.email;
         req.session.username = dbUserData.username;
+        req.session.confirmPassword = dbUserData.confirmPassword;
         req.session.loggedIn = true;
 
         res.json(dbUserData);
