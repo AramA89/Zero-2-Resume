@@ -1,63 +1,61 @@
-const { Model, DataTypes } = require("sequelize");
+//DEPENDECY & IMPORT//
+const {Model, DataTypes} = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class User extends Model {
-  checkPassword(loginPw) {
+//CHECK USER LOGIN --> BCRYPT//
+checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
-  }
-}
-
+    }
+};
+//USER MODEL//
 User.init(
-  {
+{
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
     },
     username: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+            isEmail: true,
+        },
     },
     password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [6],
-      },
-    },
-  },
-  {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [6],
+        },
+    }
+},
+{
+//FUNCTIONS BEFORE & AFTER CALLS --> SEQUELIZE//
     hooks: {
-      // set up beforeCreate lifecycle "hook" functionality
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-
-      async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      },
+//USE DATA BEFORE NEW INSTANCE CREATED//
+        async beforeCreate(newUserData) {
+//ENCRYPT USER PASSWORD (HASH) --> BCRYPT//
+            newUserData.password = await bcrypt.hash(
+                newUserData.password,
+                10
+            );
+            return newUserData;
+        },
     },
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "user",
-  }
+    }
 );
 
 module.exports = User;

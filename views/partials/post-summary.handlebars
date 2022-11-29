@@ -1,0 +1,28 @@
+<section class="section">
+    <div class="columns is-variable is-8">
+        <div class="column is-5 is-offset-1">
+            <div class="card">
+                <h1 style="margin-top: 5%" class="title has-text-black is-3"><a id="sum" href="/resume/{{0.id}}">{{0.contactInfo}}</a></h1>
+                    <img id="sum-img" class="card-img-top" src="{{format_summary 0.}}" alt="Card image">
+            <div class="card-body">
+                <h2 class="subtitle is-5 has-text-grey">{{format_date 0.createdAt}}</h2>
+                    <h6>By: {{0.user.username}}</h6>
+                        <p class="has-text-dark">{{format_summary 0.summary}}</p>
+            </div>
+            </div>
+        </div>
+        {{#if 1.contactInfo}}
+        <div class="column is-5">
+               <div class="card">
+                    <h1 style="margin-top: 5%" class="title has-text-black is-3"><a id="sum" href="/resume/{{1.id}}">{{1.workExperience}}</a></h1>
+                        <img id="sum-img" class="card-img-top" src="{{format_summary 1.education}}" alt="Card image">
+            <div class="card-body">
+                <h2 class="subtitle is-5 has-text-grey">{{format_date 1.createdAt}}</h2>
+                    <h6>By: {{1.user.username}}</h6>
+                        <p class="has-text-dark">{{format_summary 1.summary}}</p>
+            </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</section>

@@ -1,31 +1,30 @@
-async function loginFormHandler(event) {
+//***************************************************** USER LOGIN MENU ***************************************************//
+const loginFormHandler = async (event) => {
   event.preventDefault();
+  const username = document.querySelector(".username-input").value.trim();
+  const password = document.querySelector(".password-input").value.trim();
+//USERNAME LOGIN//
+if (username && password) {
+  const response = await fetch("/api/user/login", {
+    method: "POST",
+    body: JSON.stringify({username, password}),
+    headers: { "Content-Type": "application/json" },
+  });
+  if (response.ok) {
+      document.location.replace("/");
 
-  const success = document.getElementById("success");
-  const danger = document.getElementById("danger");
-  const username = document.querySelector("#username-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+          } else {
+              alert("Error❗⛔ Invalid login credentials❗⛔" +
+                  response.status +
+                      ": " +
+                  response.statusText);
+      }
+      } else {
+          alert("Error❗⛔ Please fill out all required fields❗⛔");
+      }            
+};
 
-  if (username && password) {
-    const response = await fetch("/api/users/login", {
-      method: "post",
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      danger.style.display = "none";
-      success.style.display = "block";
-      document.location.replace("/dashboard");
-    } else {
-      danger.style.display = "block";
-    }
-  }
-}
-
+//EVENT LISTENERS//
 document
-  .querySelector("#login-form")
-  .addEventListener("submit", loginFormHandler);
+  .querySelector(".login-button")
+  .addEventListener("click", loginFormHandler);

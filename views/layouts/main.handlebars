@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZERO 2 RESUME</title>
- <link rel="stylesheet" href="/css/style.css">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+                        <title>Zero 2 Resume 📋</title>
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/bulma-divider.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <script src="../js/config/apiConfig.js"></script>
+    </head>
 <body>
-  <div class="wrapper">
-      <header class="hero">
-          <div>
-            <nav class"nav">
-              <button class="button is-info">
-                <a class="link" href="/">home</a>
-                </button>
-                    {{#if loggedIn}}
-                    <button class="button is-danger">
-                    <a class="link" href="/" id="logout">logout</a>
-                    </button>
-                    {{else}}
-                    <button class="button is-success">
-                    <a class="link" href="/login">login</a>
-                    </button>
-                    <button class="button is-warning">
-                    <a class="link" href="/signup">signup</a>
-                    </button>
-                    {{/if}}
-                </nav>          
-          </div>
+{{!------------------------------ NAVBAR-START --------------------------}}
+    <div class="row" id="navirow">
+        <div class="col-5">
+            <a class="navbar-brand" style="text-decoration: none" href="/">
+                <img id="logo1" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669604361/rb-logo_njrxmz.webp"/>
+            </a>
+        </div>
+        <div class="col-7" id="navbarMenu">
+                <a  class="btn btn-primary" href="/">Home 🏠</a>   
+            
+            {{#if loggedInUserData}}
+                <a class="btn btn-primary" href="/addresume">Create Resume 💻</a>
+         
+                <a class="btn btn-primary" href="/dashboard"> {{loggedInUserData.username}}'s Profile 🧑‍🦲</a>
 
-          <h1 class="app-title"><i class="fab "></i>ZERO 2 RESUME</h1>
-      </header>
-
-    <main>
-      {{{ body }}}
-    </main>
-  </div>
-
-    {{#if loggedIn}}
-    <script src="/js/login.js"></script>
-    <script src="/js/logout.js"></script>
-    <script src="/js/signup.js"></script>
-    {{/if}}
-
-</body>
-
+                <a class="btn btn-primary" href="/logout/">Logout 🚫</a>
+            {{else}}
+                <a class="btn btn-primary" href="/login/">Login ✅</a>
+    
+                <a class="btn btn-primary" href="/signup/">Sign Up 📡</a>
+            {{/if}}
+        </div>
+    </div>
+{{!------------------------------- NAVBAR-END ------------------------------}}
+        {{{body}}}
+{{!-------------------------------- FOOTER ---------------------------------}}
+<footer style="padding-top: 5%" id="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>
+                        Zero 2 Resume 📋 - <a href="https://github.com/AramA89/Zero-2-Resume" target="_blank">Open Source</a> - Copyright © 2022 
+                    </strong>
+                </p>
+            </div>
+            <div class="logged-in-user-id is-invisible">{{loggedInUserData.id}}</div>
+</footer>
+ <script src="/js/main.js"></script>
 </html>
