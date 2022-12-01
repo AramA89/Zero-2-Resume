@@ -1,0 +1,96 @@
+{{!-- ***************************************************** EDITING A SINGLE POST VIEW *************************************************** --}}
+<section class="hero has-background-grey-lighter">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+                    <form action="" class="box">
+                        <label style="text-align: center; font-size: 200%; border-bottom: 1px solid black" class="label is-large" for="">
+                        Edit Resume 📝
+                        </label>
+                            <div class="field">
+                                <label style="font-size: 125%" for="" class="label">
+                                    Contact Information 🗃️
+                                </label>
+                                    <div class="control">
+                                        <input name="phone" type="text" placeholder="Edit phone number..." class="input contact-input"
+                                        value="{{resumeData.contactInfo}}" required/>
+                                         <label for="phone" class="label">Phone Number:</label>
+                                         <input name="email" type="text" placeholder="Edit email..." class="input contact-input"
+                                        value="{{resumeData.contactInfo}}" required/>
+                                        <label for="email" class="label">Email:</label>
+                                          <input name="github" type="text" placeholder="Edit GitHUB..." class="input contact-input"
+                                        value="{{resumeData.contactInfo}}" required/>
+                                        <label for="github" class="label">GitHUB:</label>
+                                    </div>
+                                </div>
+                        <div class="field">
+                                <label style="font-size: 125%" for="" class="label">
+                                    Education 🗃️
+                                </label>
+                                    <div class="control">
+                                        <input name="school" type="text" placeholder="Edit school name..." class="input education-input"
+                                        value="{{resumeData.education}}" required/>
+                                         <label for="school" class="label">School:</label>
+                                         <input name="degree" type="text" placeholder="Edit email..." class="input education-input"
+                                        value="{{resumeData.education}}" required/>
+                                        <label for="degree" class="label">Degree:</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                <label style="font-size: 125%" for="" class="label">
+                                    Work Experience 🗃️
+                                </label>
+                                    <div class="control">
+                                        <input name="employer" type="text" placeholder="Edit employer info..." class="input work-input"
+                                        value="{{resumeData.workExperience}}" required/>
+                                         <label for="employer" class="label">Employer Info:</label>
+                                         <input name="degree" type="text" placeholder="Edit dates of employment..." class="input work-input"
+                                        value="{{resumeData.workExperience}}" required/>
+                                        <label for="degree" class="label">Dates Employed:</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                <label style="font-size: 125%" for="" class="label">
+                                    Skills 🗃️
+                                </label>
+                                    <div class="control">
+                                        <input name="skill" type="text" placeholder="Edit skill..." class="input skill-input"
+                                        value="{{resumeData.skill}}" required/>
+                                         <label for="skill" class="label">Skill:</label>
+                                         <input name="skill" type="text" placeholder="Edit skill..." class="input skill-input"
+                                        value="{{resumeData.skill}}" required/>
+                                        <label for="skill" class="label">Skill:</label>
+                                        <input name="skill" type="text" placeholder="Edit skill..." class="input skill-input"
+                                        value="{{resumeData.skill}}" required/>
+                                        <label for="skill" class="label">Skill:</label>
+                                    </div>
+                                </div>
+                                <label class="label" style="border-bottom: 1px dashed black">Summary 🗃️</label>
+                       <div class="field-body">
+                            <div class="field" style="margin-top: 3%">
+                                <div class="control">
+                                    <label for="summary" class="label">Summary-Content:</label>
+                                    <textarea
+                                        value="{{resumeData.summary}}"
+                                        name="summary"
+                                        class="textarea content-input"
+                                        placeholder="Edit summary details..."
+                                        required>
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+            <div class="field is-grouped is-grouped-right mt-3">
+                <button id="edit-submit" class="button is-success edit-resume">
+                    Submit 📬
+                </button>
+            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="current-resume-id is-invisible">{{resumeData.id}}</div>
+</section>
+ <script src="/js/edit.js"></script>

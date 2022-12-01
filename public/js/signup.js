@@ -1,32 +1,35 @@
+//***************************************************** USER SIGNUP MENU ***************************************************//
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const success = document.getElementById("success");
-  const danger = document.getElementById("danger");
-  const username = document.querySelector("#username-signup").value.trim();
-  const email = document.querySelector("#email-signup").value.trim();
-  const password = document.querySelector("#password-signup").value.trim();
-  const confirmpassword = document
-    .querySelector("#confirmpassword-signup")
-    .value.trim();
-
-  if (username && email && password && confirmpassword) {
-    const response = await fetch("/api/users", {
+const username = document.querySelector(".username-input").value.trim();
+const email = document.querySelector(".email-input").value.trim();
+const password = document.querySelector(".password-input").value.trim();
+//ALERT USER --> PASSWORD REQUIREMENTS//
+if (password.length < 6) {
+  alert("⛔ The minimum password length is 6 characters❗ ⛔");
+} else if (username && email && password) {
+  const response = await fetch("/api/user", {
       method: "POST",
-      body: JSON.stringify({ username, email, password, confirmpassword }),
+      body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
-    });
-
-    if (password != confirmpassword) {
-      danger.style.display = "block";
-    } else {
-      danger.style.display = "none";
-      success.style.display = "block";
-      window.location.href = "/dashboard";
-    }
+  });
+  if (response.ok) {
+      document.location.replace("/");
+  } else {
+      alert(
+          "Error❗⛔ Failed to signup❗⛔" +
+              response.status +
+              ": " +
+              response.statusText
+      );
   }
+} else {
+  alert("Error❗⛔ Please fill out all required fields❗⛔");
+}
 };
 
+//EVENT LISTENERS//
 document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+.querySelector(".signup-button")
+.addEventListener("click", signupFormHandler);

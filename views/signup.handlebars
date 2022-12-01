@@ -1,64 +1,61 @@
-<section class="signup">
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title">Sign Up</div>
+<section class="hero has-background-grey-lighter is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10-tablet is-8-desktop is-6-widescreen">
+                    <form class="box">
+                        {{!-- USERNAME INPUT --}}
+                        <div class="field">
+                            <label class="label">Username 🧑‍🦲</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    type="email"
+                                    placeholder="e.g. SouthParkFan"
+                                    class="input username-input"
+                                    required/>
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+                        {{!-- EMAIL INPUT --}}
+                        <div class="field">
+                            <label class="label">Email 📧</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    type="email"
+                                    placeholder="e.g. Eric_Cartman@gmail.com"
+                                    class="input email-input"
+                                    required
+                                />
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        {{!-- PASSWORD INPUT --}}
+                        <div class="field">
+                            <label class="label">Password 🔐</label>
+                            <div class="control has-icons-left">
+                                <input
+                                    type="password"
+                                    placeholder="******* (minimum 6 characters)"
+                                    class="input password-input"
+                                    required/>
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-right">
+                            <button  class="button is-success signup-button">
+                                Sign Up 📡
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-      <form class="signup-form">
-
-        <div>
-          <label for="email-signup" class="form-label">Email</label>
-          <input
-            type="text"
-            class="form-input"
-            id="email-signup"
-            placeholder="Email"
-          />
-        </div>
-        <div>
-          <label for="username-signup" class="form-label">Username</label>
-          <input
-            type="text"
-            class="form-input"
-            id="username-signup"
-            placeholder="User Name"
-          />
-        </div>
-        <div>
-          <label for="password-signup" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-input"
-            id="password-signup"
-            placeholder="Password"
-          />
-        </div>
-        <div>
-          <label for="password-signup" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-input"
-            id="confirmpassword-signup"
-            placeholder="Confirm Password"
-          />
-        </div>
-        <div>
-          <button type="submit" class="btn">Sign Up</button>
-        </div>
-
-        <div class="message">
-          <div class="danger" id="danger">Passwords did not match</div>
-          <div class="success" id="success">Account created successfully</div>
-        </div>
-
-        <button class="button is-primary is-outlined">
-          <a class="login-link" href="/login">Already have an account ? Login
-            Now!</a>
-        </button>
-
-      </form>
-    </div>
-  </div>
 </section>
-
 <script src="/js/signup.js"></script>

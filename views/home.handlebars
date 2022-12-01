@@ -1,0 +1,48 @@
+   {{!------------------------------- MAIN-CONTENT W/OUT USER-LOGIN ------------------------------}}
+<main>
+    <div class="card bg">
+            <img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669610696/2_resume_icons_wryehv.jpg" class="card-img" alt="home">
+        <div class="card-img-overlay">
+            <h5 class="card-title"><img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669610800/cooltext424394287581101_cfzzyv.png"></h5>
+        </div>
+    </div>
+</main>
+{{!------------------------------------- NEWEST POST SPACE --------------------------------------------}}
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <section class="section">
+        <div class="columns">
+          <div class="column is-8 is-offset-2" style="padding-top: 5%">
+            <div class="card" style="width: 100%; padding-top: 3%; text-align: center">
+            <h1 id="title" class="title"><a href="/post/{{resumes.0.0.id}}">{{resumes.0.0.education}}</a></h1>
+            <img class="card-img-top" src="{{resmumes.0.0.contactInfo}}" alt="Card image">
+            <div class="card-body">
+              <h2>{{format_date resumes.0.0.createdAt}}</h2>
+              <h6>By: {{resumes.0.0.user.username}}</h6>
+              <p class="card-text">{{resumes.0.0.summary}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{{!------------------------------------ *END* POST SPACE *END* ----------------------------------}}
+<div class="is-divider"></div>
+      </div>
+    </div>
+</section>
+  {{!--------------------------------------------- POST MAP ----------------------------------------------}}
+<section class="hero ">
+  <div class="hero-body-neg">
+    <div class="container">
+      {{#each resumes as |resume|}}
+        {{#if @first}}
+           
+      {{else}}
+        {{> post-summary}}
+          {{/if}}
+      {{/each}}
+    </div>
+  </div>
+</section>
+<script src='/js/main.js'></script>

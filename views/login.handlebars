@@ -1,40 +1,41 @@
-<div class="card">
-  <h3 class="card-header">Login</h3>
-  <form id="login-form" class="card-body">
-    <label class="form-label" for="username-login">Username</label>
-    <input
-      id="username-login"
-      type="text"
-      autofocus="true"
-      class="form-input"
-      placeholder="User Name"
-    />
-
-    <label class="form-label" for="password-login">Password</label>
-    <input
-      id="password-login"
-      type="password"
-      autofocus="true"
-      class="form-input"
-      placeholder="Password"
-    />
-
-    <button type="submit" class="btn">Login!</button>
-
-
-    
-     <div class="message">
-      <div class="danger" id="danger">Incorrect username or password.</div>
-      <div class="success" id="success">Login successfully!</div>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+                    <form class="box">
+                        <div class="field">
+                            <label class="label">Username 🧑‍🦲</label>
+                            <div class="control has-icons-left">
+                                <input type="text" placeholder=" e.g. SouthParkFan" class="input username-input" required/>
+                                <span class="icon is smal is-left"><i class="fa fa-user"></i></span>
+                            </div>
+                        </div>
+                           <div class="field">
+                            <label class="label">Password 🔐</label>
+                            <div class="control has-icons-left">
+                                <input type="password" placeholder="*******" class="input password-input" required/>
+                                <span class="icon is-small is-left">
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-right">
+                            <p class="control">
+                                <a id="signup-btn" class="button is-info" href="/signup/">
+                                    Sign Up 📡
+                                </a>
+                            </p>
+                            <p class="control login-button">
+                                <a id="login-btn" class="button is-success">
+                                    Login ✅
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-    <button class="button is-primary is-outlined">
-      <a class="login-link" href="/signup">Don't have an account ? Sign up Now!</a>
-    </button>
-  </form>
-</div>
-
-<!-- javascript file-->
+</section>
 <script src="/js/login.js"></script>

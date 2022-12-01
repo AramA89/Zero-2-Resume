@@ -2,8 +2,8 @@ const router = require("express").Router();
 
 //RENDER HANDLEBARS --> HTML//
     router.get("/", async (req, res) => {
-        res.render("signup", {
-            loggedIn: req.session.loggedIn,
+        res.render("logout", {
+            loggedIn: false,
             loggedInUserData: req.session.loggedInUserData,
         });
     });

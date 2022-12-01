@@ -1,0 +1,61 @@
+<section id="user-dash" class="hero has-background-grey-lighter hug">
+    <label class="label" style="border-bottom: 1px solid black; margin-bottom: 3%; text-align: center; font-size: 200%"> {{loggedInUserData.username}}'s Dashboard 🎛️</label>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+{{!--------------------------------------------- DASHBOARD TABLE -------------------------------------------}}
+                    <form id="dash-box" class="box">
+                        <table id="table-dash">
+                            <thead>
+                                <tr id="dash-table">
+                                    <th class="table-id">ID 📇</th>
+                                    <th class="table-title">Contact Info</th>
+                                    <th class="table-title">Education</th>
+                                    <th class="table-title">Work Experience</th>
+                                    <th class="table-title">Skills</th>
+                                    <th class="table-title">Summary</th>
+                                    <th class="table-created">Date/Time 🗓️</th>
+                                    <th class="table-edit">Edit ✍️</th>
+                                    <th class="table-delete">Delete ❌</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {{#each resumes}}
+                                    <tr id="table-row">
+                                        <td>{{this.id}}</td>
+                                        <td>
+                                            <a href="/resume/{{this.id}}">{{contactInfo}}</a>
+                                        </td>
+                                         <td>
+                                            <a href="/resume/{{this.id}}">{{education}}</a>
+                                        </td>
+                                         <td>
+                                            <a href="/resume/{{this.id}}">{{workExperience}}</a>
+                                        </td>
+                                         <td>
+                                            <a href="/resume/{{this.id}}">{{skills}}</a>
+                                        </td>
+                                         <td>
+                                            <a href="/resume/{{this.id}}">{{summary}}</a>
+                                        </td>
+                                        <td>{{this.user.username}}</td>
+                                        <td>{{format_date this.createdAt}}</td>
+                                        <td id="editt">
+                                            <a id="edit" href="/edit/{{this.id}}">✍️</a>
+                                        </td>
+                                        <td id="delete">
+                                            <a class="delete-resume" id="delete-post" data-id="{{this.id}}">❌</a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/dashboard.js"></script>
