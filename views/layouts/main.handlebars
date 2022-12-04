@@ -4,50 +4,103 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-                        <title>Zero 2 Resume 📋</title>
-        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+        <title>ZERO 2 RESUME</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/bulma-divider.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="/css/bulmaa.divider.css" />
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-        <script src="../js/config/apiConfig.js"></script>
+        <script src="./js/config/apiConfig.js"></script>
     </head>
 <body>
 {{!------------------------------ NAVBAR-START --------------------------}}
-    <div class="row" id="navirow">
-        <div class="col-5">
-            <a class="navbar-brand" style="text-decoration: none" href="/">
+            {{!-- <a class="navbar-brand" style="text-decoration: none" href="/">
                 <img id="logo1" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669604361/rb-logo_njrxmz.webp"/>
-            </a>
-        </div>
-        <div class="col-7" id="navbarMenu">
-                <a  class="btn btn-primary" href="/">Home 🏠</a>   
-            
-            {{#if loggedInUserData}}
-                <a class="btn btn-primary" href="/addresume">Create Resume 💻</a>
-         
-                <a class="btn btn-primary" href="/dashboard"> {{loggedInUserData.username}}'s Profile 🧑‍🦲</a>
+            </a> --}}
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    {{! create logo }}
+    {{! <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a> }}
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item"  href="/">
+        Home
+      </a>
+      {{!-- <input
+        class="input is-rounded"
+        type="text"
+        placeholder="Search Applicants"
+      /> --}}
+    </div>
 
-                <a class="btn btn-primary" href="/logout/">Logout 🚫</a>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="/signup">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light" href="/login">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+            
+
+            {{#if loggedInUserData}}
+                <a class="btn btn-primary" href="/addresume">Create Resume</a>
+         
+                <a class="btn btn-primary" href="/dashboard"> {{loggedInUserData.username}}'s Profile</a>
+
+                <a class="btn btn-primary" href="/logout">Logout</a>
             {{else}}
-                <a class="btn btn-primary" href="/login/">Login ✅</a>
-    
-                <a class="btn btn-primary" href="/signup/">Sign Up 📡</a>
+
             {{/if}}
         </div>
     </div>
 {{!------------------------------- NAVBAR-END ------------------------------}}
         {{{body}}}
 {{!-------------------------------- FOOTER ---------------------------------}}
-<footer style="padding-top: 5%" id="footer">
-            <div class="content has-text-centered">
+
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <div class="content has-text-centered">
+      <p>
+      Brought to you by Group 3 by
+      <a href="https://github.com/alisradwan">Ali,</a>
+      <a href="https://github.com/SaintMartyrn">Dart,</a>
+      <a href="https://github.com/AramA89">Aram</a>
+      </p>
+      </div>
+      <div class="content has-text-centered">
                 <p>
                     <strong>
-                        Zero 2 Resume 📋 - <a href="https://github.com/AramA89/Zero-2-Resume" target="_blank">Open Source</a> - Copyright © 2022 
+                        Zero 2 Resume 📋 - Copyright © 2022 
                     </strong>
                 </p>
             </div>
             <div class="logged-in-user-id is-invisible">{{loggedInUserData.id}}</div>
+    </div>
+  </div>
 </footer>
  <script src="/js/main.js"></script>
 </html>

@@ -1,38 +1,92 @@
-   {{!------------------------------- MAIN-CONTENT W/OUT USER-LOGIN ------------------------------}}
-<main>
-    <div class="card bg">
-            <img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669610696/2_resume_icons_wryehv.jpg" class="card-img" alt="home">
-        <div class="card-img-overlay">
-            <h5 class="card-title"><img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669610800/cooltext424394287581101_cfzzyv.png"></h5>
+<section class="section is-medium">
+  <h1 class="title">Welcome to the Start of Your New Career</h1>
+  <h2 class="subtitle">
+    Continue reading below to learn how to create a professional and unique resume.
+  </h2>
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"> Do's & Dont's</p>
+        <p class="subtitle">Don't Forget</p>
+        <div class="content">
+          <p>Do mention your accomplishments and exampes of your successes.</p>
+          <p>Don't forget to proofread for spelling mistakes.</p>
+          <p>Do update yoru resume frequently and keep a copy readily available to present.</p>
+          <p> Don't overload your resume, only add what presents the best YOU.</p> 
         </div>
+      </article>
     </div>
-</main>
-{{!------------------------------------- NEWEST POST SPACE --------------------------------------------}}
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <section class="section">
-        <div class="columns">
-          <div class="column is-8 is-offset-2" style="padding-top: 5%">
-            <div class="card" style="width: 100%; padding-top: 3%; text-align: center">
-            <h1 id="title" class="title"><a href="/post/{{resumes.0.0.id}}">{{resumes.0.0.education}}</a></h1>
-            <img class="card-img-top" src="{{resmumes.0.0.contactInfo}}" alt="Card image">
-            <div class="card-body">
-              <h2>{{format_date resumes.0.0.createdAt}}</h2>
-              <h6>By: {{resumes.0.0.user.username}}</h6>
-              <p class="card-text">{{resumes.0.0.summary}}</p>
-            </div>
-          </div>
+    <div class="tile is-parent is-8">
+      <article class="tile is-child box">
+        <p class="title">How to build a profesisonal Resume:</p>
+        <p class="subtitle">What should your resume include?</p>
+        <div class="content">
+          <p> Your resume is the first thing employers will see when they think about hiring you for a position or not. But a resume is more than just a list of your accreditations, skills, and work history. Your resume should show a potential employer that you would be a crucial asset to the team and not bringing you aboard would be a mistake. 
+          </p>
+          <p>
+               Your resume should include your motivations, goals, and even some reasons you are interested in the field. It is important to not overload your resume with content that downs out your acconplishments. If your employer was only going to skim thorugh your resume once what would you want them to know about yourself? The first impression your resume gives may be the deciding factor in whther you get an interview or not so put care into your creation. 
+          </p>
         </div>
-      </div>
-    </section>
-{{!------------------------------------ *END* POST SPACE *END* ----------------------------------}}
-<div class="is-divider"></div>
-      </div>
+      </article>
     </div>
+  </div>
 </section>
+
+<section class="section is-large">
+  <h1 class="title">Resume Templates</h1>
+  <h2 class="subtitle">
+    More templates coming
+    <strong>soon</strong>.
+  </h2>
+<div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"> Resume 1</p>
+        <p class="subtitle">
+          <figure class="image is-4by5">
+           <img src="https://assets.qwikresume.com/resume-samples/pdf/screenshots/stock-controller-1607579377-pdf.jpg">
+          </figure>
+        </p>
+        <div class="content">
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title"> Resume 2</p>
+        <p class="subtitle">
+            <figure class="image is-4by5">
+              <img src="https://media.istockphoto.com/id/1181378326/vector/geometric-banner-megaphone-with-coming-soon-bubble-loudspeaker-modern-flat-style-vector.jpg?s=612x612&w=0&k=20&c=Xk2s7CJgG6gZMo0FODn7T9zRI3nn-CXyjUX-EVKMi2M=">
+            </figure>
+        </p>
+        <div class="content">
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">Resume 3</p>
+        <p class="subtitle">
+            <figure class="image is-4by5">
+              <img src="https://media.istockphoto.com/id/1181378326/vector/geometric-banner-megaphone-with-coming-soon-bubble-loudspeaker-modern-flat-style-vector.jpg?s=612x612&w=0&k=20&c=Xk2s7CJgG6gZMo0FODn7T9zRI3nn-CXyjUX-EVKMi2M=">
+            </figure>
+        </p>
+        <div class="content">
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+{{!-- ----------------------------------- NEWEST POST SPACE --------------------------------------------}}
+
+{{!------------------------------------ *END* POST SPACE *END* ----------------------------------}}
+{{!-- <div class="is-divider"></div>
+      </div>
+    </div>
+</section> --}}
   {{!--------------------------------------------- POST MAP ----------------------------------------------}}
-<section class="hero ">
+{{!-- <section class="hero ">
   <div class="hero-body-neg">
     <div class="container">
       {{#each resumes as |resume|}}
@@ -44,5 +98,6 @@
       {{/each}}
     </div>
   </div>
-</section>
-<script src='/js/main.js'></script>
+</section> --}}
+
+{{!-- <script src='/js/main.js'></script> --}}

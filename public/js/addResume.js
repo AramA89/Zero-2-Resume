@@ -18,7 +18,7 @@ const user_id = document.querySelector(".logged-in-user-id").innerHTML;
             headers: { "Content-Type": "application/json" },
         });
         if (response.ok) {
-            document.location.replace("/addResume")
+            document.location.replace("/dashboard")
             + 
             alert(`Success✅ New Resume Added❕✍`);
         } else {
@@ -34,36 +34,8 @@ const user_id = document.querySelector(".logged-in-user-id").innerHTML;
         }
     }
 };
-//DELETE POST//
-const deleteResumeHandler = async (event) => {
-    event.preventDefault();
-    const deleteResumeId = event.target.getAttribute("data-id");
-    if (deleteResumeId) {
-    const response = await fetch("/api/resume/" + deleteResumeId, {
-    method: "DELETE",
-    headers: { "Content-Type": "application/json" },
-    });
-    if (response.ok) {
-
-    alert(`Warning❗⛔ Post deleted❗❌` 
-                        +
-    document.location.replace("/addresume"));
-
-    } else {
-        alert("Error❗⛔ Failed to delete resume❗⛔" +
-            response.status +
-            ": " +
-            response.statusText);
-        }
-    }
-};
 //EVENT LISTENERS//
 document
     .querySelector(".submit-resume")
     .addEventListener("click", submitResumeHandler
-);
-//EVENT LISTENERS//
-const deleteButtons = document.querySelectorAll(".delete-resume");
-    deleteButtons.forEach((el) =>
-        el.addEventListener("click", (event) => deleteResumeHandler(event))
 );

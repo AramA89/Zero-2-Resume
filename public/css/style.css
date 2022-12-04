@@ -118,10 +118,15 @@ text-align: left;
 
 body,
 html {
-  height: 100%;
+  min-height: 100vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(24, 36, 25);
+  background-color: #edd2a4;
 }
+
+header {
+  text-align: center;
+  font-size: 40px;
+  color: 	#5A5A5A;}
 
 #homelogo {
   border-radius: 1em; 
@@ -201,10 +206,13 @@ transition: all 0.3s ease-in-out;
 
 #table-dash {
   width: 100%;
+  
 }
 
 #dash-box {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #dash-table {
@@ -224,6 +232,8 @@ transition: all 0.3s ease-in-out;
 #table-row {
   text-align: center;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px dashed black;
   border-right: 1px dashed black;
   border-left: 1px dashed black;
@@ -334,7 +344,12 @@ td {
   text-decoration: none;
 }
 
-#footer {
-  height: 20%;
-  font-size: 125%;
+.footer-container {
+
+}
+
+@media screen and (min-width: 1000px){
+.footer-container {
+  position: absolute;
+}
 }

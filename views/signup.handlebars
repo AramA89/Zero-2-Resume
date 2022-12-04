@@ -1,61 +1,69 @@
-<section class="hero has-background-grey-lighter is-medium">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-10-tablet is-8-desktop is-6-widescreen">
-                    <form class="box">
-                        {{!-- USERNAME INPUT --}}
-                        <div class="field">
-                            <label class="label">Username 🧑‍🦲</label>
-                            <div class="control has-icons-left">
-                                <input
-                                    type="email"
-                                    placeholder="e.g. SouthParkFan"
-                                    class="input username-input"
-                                    required/>
-                                <span class="icon is-small is-left">
-                                    <i class="fa fa-user"></i>
-                                </span>
-                            </div>
-                        </div>
-                        {{!-- EMAIL INPUT --}}
-                        <div class="field">
-                            <label class="label">Email 📧</label>
-                            <div class="control has-icons-left">
-                                <input
-                                    type="email"
-                                    placeholder="e.g. Eric_Cartman@gmail.com"
-                                    class="input email-input"
-                                    required
-                                />
-                                <span class="icon is-small is-left">
-                                    <i class="fa fa-envelope"></i>
-                                </span>
-                            </div>
-                        </div>
-                        {{!-- PASSWORD INPUT --}}
-                        <div class="field">
-                            <label class="label">Password 🔐</label>
-                            <div class="control has-icons-left">
-                                <input
-                                    type="password"
-                                    placeholder="******* (minimum 6 characters)"
-                                    class="input password-input"
-                                    required/>
-                                <span class="icon is-small is-left">
-                                    <i class="fa fa-lock"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="field is-grouped is-grouped-right">
-                            <button  class="button is-success signup-button">
-                                Sign Up 📡
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<section class="section is-medium">
+  <div class="tile is-parent is-12">
+    <article class="tile is-child box">
+      <p class="title">Sign Up Now</p>
+      <p class="subtitle">Let's create your professional resume</p>
+      <div class="content">
+        <div class="field">
+  </div>
+
+ <div class="field">
+  <label class="label">Username</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input username-input" type="text" placeholder="Text input" id="username-signup" value="John Doe">
+    <span class="icon is-small is-left">
+      <i class="fas fa-user"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </div>
+ </div>
+
+ <div class="field">
+  <label class="label">Email</label>
+  <div class="control has-icons-left has-icons-right">
+    <input class="input email-input" type="email" placeholder="Email input"  id="email-signup" value="hello@">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
+  </div>
+ </div>
+
+ <label class="label">Password</label>
+  <div class="control">
+    <input class="input password-input" type="text"  id="password-signup" placeholder="Password">
+  </div>
+
+  <label class="label"> Confirm Password</label>
+  <div class="control">
+    <input class="input" type="text" id="confirmpassword-signup" placeholder=" Confirm Password">
+  </div>
+
+        <button class="button is-primary is-warning">
+          <a class="login-link" href="/login">Have an account? Login
+            Now!</a>
+        </button>
+
+  <div class="field is-grouped">
+  <div class="control">
+    <button class="button is-success signup-button">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light">Cancel</button>
+  </div>
+  </div>
+      </div>
+
+      </form>
     </div>
+  </div>
+</section>
+<section class="section is-large">
+
 </section>
 <script src="/js/signup.js"></script>
+

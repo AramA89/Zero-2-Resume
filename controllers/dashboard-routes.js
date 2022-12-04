@@ -5,9 +5,10 @@ const withAuth = require('../utils/auth');
 
 router.get("/", withAuth, async (req, res) => {
     try {
-        const resumeData = await Resume.findAll({
+        const resumeData = await Resume.findAll({ 
+            where: {user_id: req.session.loggedInUserData.id},
             include: [
-            {
+            { 
                 model: User,
                 attributes: ["id", "username"],
             },
