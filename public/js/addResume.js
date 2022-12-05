@@ -5,8 +5,8 @@ const submitResumeHandler = async (event) => {
 const contactInfo = document.querySelector(".contact-input").value
 const education = document.querySelector(".education-input").value
 const workExperience = document.querySelector(".work-input").value
-const skills = document.querySelector(".skill-input").value
-const summary = document.querySelector(".content-input").value
+const skills = document.querySelector("#skill-1", "#skill-2", "#skill-3").value
+const summary = document.querySelector("#summary-input").value
 const user_id = document.querySelector(".logged-in-user-id").innerHTML;
     if (!user_id) {
         alert("Error❗⛔ Unable to create resume, please login❗⛔");
@@ -18,7 +18,7 @@ const user_id = document.querySelector(".logged-in-user-id").innerHTML;
             headers: { "Content-Type": "application/json" },
         });
         if (response.ok) {
-            document.location.replace("/dashboard")
+            document.location.replace("/addResume")
             + 
             alert(`Success✅ New Resume Added❕✍`);
         } else {

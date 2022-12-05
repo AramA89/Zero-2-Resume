@@ -9,31 +9,17 @@
                         <table id="table-dash">
                             <thead>
                                 <tr id="dash-table">
-                                    <th class="table-id">ID 📇</th>
+                                    <th class="table-id"> ID 📇</th>
                                     <th class="table-created">Date/Time 🗓️</th>
                                     <th class="table-edit">Edit ✍️</th>
                                     <th class="table-delete">Delete ❌</th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 {{#each resumes}}
                                     <tr id="table-row">
-                                        <td>{{this.id}}</td>
                                         <td>
-                                            <a {{this.id}}>{{contactInfo}}</a>
-                                        </td>
-                                         <td>
-                                            <a {{this.id}}>{{education}}</a>
-                                        </td>
-                                         <td>
-                                            <a {{this.id}}>{{workExperience}}</a>
-                                        </td>
-                                         <td>
-                                            <a {{this.id}}>{{skills}}</a>
-                                        </td>
-                                         <td>
-                                            <a {{this.id}}>{{summary}}</a>
+                                        <a href="/viewresume/{{this.id}}">{{this.id}}</a>
                                         </td>
                                         <td>{{this.user.username}}</td>
                                         <td>{{format_date this.createdAt}}</td>
