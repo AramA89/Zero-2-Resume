@@ -19,7 +19,6 @@ router.get("/:id", async (req, res) => {
                 ],
     });
         const resume = resumeData.get({ plain: true });
-            console.log(resume);
         if (resume) {
             res.render("resume", {
                 loggedIn: req.session.loggedIn,

@@ -2,6 +2,7 @@
 //DELETE POST//
     const deleteResumeHandler = async (event) => {
         event.preventDefault();
+
         const deleteResumeId = event.target.getAttribute("data-id");
         if (deleteResumeId) {
             const response = await fetch("/api/resume/" + deleteResumeId, {
@@ -24,6 +25,6 @@
     };
 //EVENT LISTENERS//
     const deleteButtons = document.querySelectorAll(".delete-resume");
-        deleteButtons.forEach((el) =>
-            el.addEventListener("click", (event) => deleteResumeHandler(event))
+    deleteButtons.forEach((el) =>
+    el.addEventListener("click", (event) => deleteResumeHandler(event))
     );
