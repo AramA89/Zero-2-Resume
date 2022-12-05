@@ -37,6 +37,7 @@ router.put("/:id", async (req, res) => {
 
 //DELETE//
 router.delete("/:id", async (req, res) => {
+    console.log(req.params.id);
     try {
         const deleteResumeData = await Resume.destroy({
             where: {
