@@ -3,7 +3,10 @@
 }
 
 .container {
-  background-image: linear-gradient(rgb(197, 199, 208) 0%, rgb(109, 109, 116) 100%);
+  background-image: linear-gradient(
+    rgb(197, 199, 208) 0%,
+    rgb(109, 109, 116) 100%
+  );
   border-radius: 0.5em;
   border: 1px solid black;
 }
@@ -14,7 +17,6 @@
   padding-top: 2%;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
-
 
 #inline_container {
   max-height: auto;
@@ -44,7 +46,7 @@ h1 {
 }
 
 #title a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 #title a:hover {
@@ -91,7 +93,7 @@ text-decoration: none;
 }
 
 .custom__form input {
-text-align: left;
+  text-align: left;
 }
 
 .custom__image-container label {
@@ -126,11 +128,12 @@ html {
 header {
   text-align: center;
   font-size: 40px;
-  color: 	#5A5A5A;}
+  color: #5a5a5a;
+}
 
 #homelogo {
-  border-radius: 1em; 
-  border: 2px solid black; 
+  border-radius: 1em;
+  border: 2px solid black;
   width: 65%;
   box-shadow: 0 8px 5px 0 rgb(2, 2, 130), 0 5px 3px 0 rgb(1, 1, 82);
 }
@@ -147,9 +150,9 @@ header {
 
 #logo2 {
   width: 30%;
-    border: solid 1.5px black;
-    border-radius: 0.5em;
-    box-shadow: 0 10px 5px 0 rgb(52, 52, 54), 0 10px 10px 0 rgb(45, 45, 46);
+  border: solid 1.5px black;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 5px 0 rgb(52, 52, 54), 0 10px 10px 0 rgb(45, 45, 46);
 }
 
 #navirow {
@@ -169,7 +172,10 @@ header {
 #navbarMenu a {
   border-radius: 0.5em;
   border: solid 1px black;
-  background-image: linear-gradient(rgb(235, 237, 244) 0%, rgb(65, 65, 69) 100%);
+  background-image: linear-gradient(
+    rgb(235, 237, 244) 0%,
+    rgb(65, 65, 69) 100%
+  );
   font-weight: bold;
   color: black;
   margin: 2.5%;
@@ -184,11 +190,10 @@ header {
   color: whitesmoke;
 }
 
-
 #login-btn:hover {
-font-size: 85%;
-background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
-transition: all 0.3s ease-in-out;
+  font-size: 85%;
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  transition: all 0.3s ease-in-out;
 }
 
 #signup-btn:hover {
@@ -206,7 +211,6 @@ transition: all 0.3s ease-in-out;
 
 #table-dash {
   width: 100%;
-  
 }
 
 #dash-box {
@@ -345,11 +349,28 @@ td {
 }
 
 .footer-container {
-
 }
 
-@media screen and (min-width: 1000px){
-.footer-container {
-  position: absolute;
+@media screen and (min-width: 1000px) {
+  .footer-container {
+    position: absolute;
+  }
 }
+
+.navitem {
+  text-align: center;
+  box-shadow: 5px 5px 5px;
+  border-radius: 6px;
+}
+
+.conternot {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.btns {
+  margin: 5px;
+  box-shadow: black 5px 5px 15px;
+  font-weight: bold;
 }

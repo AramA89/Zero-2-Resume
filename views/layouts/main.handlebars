@@ -40,7 +40,7 @@
   
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item"  href="/">
+      <a class="navbar-item navitem"  href="/">
         Home
       </a>
       {{!-- <input
@@ -51,7 +51,7 @@
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item">
+      <div class="navbar-item navitem">
         <div class="buttons">
           <a class="button is-primary" href="/signup">
             <strong>Sign up</strong>
@@ -65,18 +65,19 @@
   </div>
 </nav>
             
-
+<div class="conternot">
             {{#if loggedInUserData}}
-                <a class="btn btn-primary" href="/addresume">Create Resume</a>
+                <a class="btn btn-primary btns" href="/addresume">Create Resume</a>
          
-                <a class="btn btn-primary" href="/dashboard"> {{loggedInUserData.username}}'s Profile</a>
+                <a class="btn btn-primary btns" href="/dashboard"> {{loggedInUserData.username}}'s Profile</a>
 
-                <a class="btn btn-primary" href="/logout">Logout</a>
+                <a class="btn btn-primary btns" href="/logout">Logout</a>
             {{else}}
 
             {{/if}}
         </div>
     </div>
+
 {{!------------------------------- NAVBAR-END ------------------------------}}
         {{{body}}}
 {{!-------------------------------- FOOTER ---------------------------------}}
