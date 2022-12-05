@@ -1,42 +1,43 @@
 <section id="user-dash" class="hero">
-    <label class="label" style="border-bottom: 1px solid black; margin-bottom: 3%; text-align: center; font-size: 200%"> {{loggedInUserData.username}}'s Dashboard 🎛️</label>
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column">
+<label class="label" style="border-bottom: 1px solid black; margin-bottom: 3%; text-align: center; font-size: 200%"> Welcome back {{loggedInUserData.username}}!</label>
+<div class="hero-body">
+<div class="container">
+<div class="columns is-centered">
+<div class="column">
 {{!--------------------------------------------- DASHBOARD TABLE -------------------------------------------}}
-                    <form id="dash-box" class="box">
-                        <table id="table-dash">
-                            <thead>
-                                <tr id="dash-table">
-                                    <th class="table-id"> ID 📇</th>
-                                    <th class="table-created">Date/Time 🗓️</th>
-                                    <th class="table-edit">Edit ✍️</th>
-                                    <th class="table-delete">Delete ❌</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {{#each resumes}}
-                                    <tr id="table-row">
-                                        <td>
-                                        <a href="/viewresume/{{this.id}}">{{this.id}}</a>
-                                        </td>
-                                        <td>{{this.user.username}}</td>
-                                        <td>{{format_date this.createdAt}}</td>
-                                        <td id="editt">
-                                            <a id="edit" href="/edit/{{this.id}}">✍️</a>
-                                        </td>
-                                        <td id="delete">
-                                            <a class="delete-resume" data-id="{{this.id}}">❌</a>
-                                        </td>
-                                    </tr>
-                                {{/each}}
-                            </tbody>
-                        </table>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<form id="dash-box" class="box">
+    <table id="table-dash">
+        <thead>
+            <tr id="dash-table">
+                <th class="table-id"> ID <i class="fa-regular fa-id-card" id="id"></i></th>
+                <th class="table-id"> Username <i class="fa-solid fa-user"></i></th>
+                <th class="table-created">Date/Time <i class="fa-regular fa-calendar-days" id="cal"></i></th>
+                <th class="table-edit">Edit <i class="fa-solid fa-file-pen" id="pen"></i></th>
+                <th class="table-delete">Delete <i class="fa-solid fa-trash-can" id="trash"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each resumes}}
+                <tr id="dash-table">
+                    <td>
+                    <a href="/resume/{{this.id}}">{{this.id}}</a>
+                    </td>
+                    <td>{{this.user.username}}</td>
+                    <td>{{format_date this.createdAt}}</td>
+                    <td id="editt">
+                        <a id="edit" href="/edit/{{this.id}}"><i class="fa-solid fa-file-pen" id="pen"></i></a>
+                    </td>
+                    <td id="delete">
+                        <a class="delete-resume" data-id="{{this.id}}"><i class="fa-solid fa-trash-can" id="trash1"></i></a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</form>
+</div>
+</div>
+</div>
+</div>
 </section>
 <script src="/js/dashboard.js"></script>

@@ -14,17 +14,12 @@
         {{!-- <script src="./js/config/apiConfig.js"></script> --}}
     </head>   
 <body>
-  
-{{!------------------------------ NAVBAR-START --------------------------}}
-            {{!-- <a class="navbar-brand" style="text-decoration: none" href="/">
-                <img id="logo1" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1669604361/rb-logo_njrxmz.webp"/>
-            </a> --}}
+   <header>
+    <h1>Zero 2 Resume</h1>
+  </header>
             <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    {{! create logo }}
-    {{! <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a> }}
+
     <a
       role="button"
       class="navbar-burger"
@@ -43,11 +38,6 @@
       <a class="navbar-item navitem"  href="/">
         Home
       </a>
-      {{!-- <input
-        class="input is-rounded"
-        type="text"
-        placeholder="Search Applicants"
-      /> --}}
     </div>
 
     <div class="navbar-end">
@@ -93,13 +83,6 @@
       <a href="https://github.com/AramA89">Aram</a>
       </p>
       </div>
-      <div class="content has-text-centered">
-                <p>
-                    <strong>
-                        Zero 2 Resume 📋 - Copyright © 2022 
-                    </strong>
-                </p>
-            </div>
             <div class="logged-in-user-id is-invisible">{{loggedInUserData.id}}</div>
     </div>
   </div>

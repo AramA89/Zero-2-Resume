@@ -2,22 +2,28 @@
 const submitResumeHandler = async (event) => {
     event.preventDefault();
 
-const contactInfo = document.querySelector(".contact-input").value
-const education = document.querySelector(".education-input").value
-const workExperience = document.querySelector(".work-input").value
-const skills = document.querySelector("#skill-1", "#skill-2", "#skill-3").value
-const summary = document.querySelector("#summary-input")
+const name = document.querySelector("#name-input").value;
+const phone = document.querySelector("#phone-input").value;
+const email = document.querySelector("#email-input").value;
+const github = document.querySelector("#github-input").value;
+const school = document.querySelector("#school-input").value;
+const degree = document.querySelector("#degree-input").value;
+const employer = document.querySelector("#employer-input").value;
+const dates_worked = document.querySelector("#dates-worked").value;
+const skill_1 = document.querySelector("#skill-1").value;
+const skill_2 = document.querySelector("#skill-2").value;
+const skill_3 = document.querySelector("#skill-3").value;
+const summary = document.querySelector("#summary-input").value;
 const user_id = document.querySelector(".logged-in-user-id").innerHTML;
-const resume_id = document.querySelector(".current-in-resume-id").innerHTML;
-
+const resume_id = document.querySelector(".current-resume-id").innerHTML;
 
     if (!user_id) {
         alert("Error❗⛔ Unable to edit resume, please login❗⛔");
         } else {
-        if (user_id) {
+        if (name && phone && email && github && school && degree && employer && dates_worked && skill_1 && skill_2 && skill_3 && summary) {
             const response = await fetch("/api/resume/" + resume_id, {
                 method: "PUT",
-                body: JSON.stringify({ contactInfo, education, workExperience, skills, summary, user_id }),
+                body: JSON.stringify({ name, phone, email, github, school, degree, employer, dates_worked, skill_1, skill_2, skill_3, summary, user_id }),
                 headers: { "Content-Type": "application/json" },
             });
             if (response.ok) {
