@@ -20,7 +20,7 @@ router.use("/signup", signupRoutes);
 router.use("/logout", logoutRoutes);
 router.use("/dashboard", dashboardRoutes);
 router.use("/edit", editRoutes);
-router.use("/addResume", addResume);
+router.use("/addresume", addResume);
 router.use("/", homeRoute);
 router.use("/useredit", userEdit);
 
