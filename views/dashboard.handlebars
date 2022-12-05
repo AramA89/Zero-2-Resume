@@ -1,4 +1,4 @@
-<section id="user-dash" class="hero has-background-grey-lighter hug">
+<section id="user-dash" class="hero">
     <label class="label" style="border-bottom: 1px solid black; margin-bottom: 3%; text-align: center; font-size: 200%"> {{loggedInUserData.username}}'s Dashboard 🎛️</label>
     <div class="hero-body">
         <div class="container">
@@ -10,11 +10,6 @@
                             <thead>
                                 <tr id="dash-table">
                                     <th class="table-id">ID 📇</th>
-                                    <th class="table-title">Contact Info</th>
-                                    <th class="table-title">Education</th>
-                                    <th class="table-title">Work Experience</th>
-                                    <th class="table-title">Skills</th>
-                                    <th class="table-title">Summary</th>
                                     <th class="table-created">Date/Time 🗓️</th>
                                     <th class="table-edit">Edit ✍️</th>
                                     <th class="table-delete">Delete ❌</th>
@@ -26,19 +21,19 @@
                                     <tr id="table-row">
                                         <td>{{this.id}}</td>
                                         <td>
-                                            <a href="/resume/{{this.id}}">{{contactInfo}}</a>
+                                            <a {{this.id}}>{{contactInfo}}</a>
                                         </td>
                                          <td>
-                                            <a href="/resume/{{this.id}}">{{education}}</a>
+                                            <a {{this.id}}>{{education}}</a>
                                         </td>
                                          <td>
-                                            <a href="/resume/{{this.id}}">{{workExperience}}</a>
+                                            <a {{this.id}}>{{workExperience}}</a>
                                         </td>
                                          <td>
-                                            <a href="/resume/{{this.id}}">{{skills}}</a>
+                                            <a {{this.id}}>{{skills}}</a>
                                         </td>
                                          <td>
-                                            <a href="/resume/{{this.id}}">{{summary}}</a>
+                                            <a {{this.id}}>{{summary}}</a>
                                         </td>
                                         <td>{{this.user.username}}</td>
                                         <td>{{format_date this.createdAt}}</td>
