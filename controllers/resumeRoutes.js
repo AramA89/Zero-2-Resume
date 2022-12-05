@@ -20,7 +20,7 @@ router.get("/:id", async (req, res) => {
     });
         const resume = resumeData.get({ plain: true });
         if (resume) {
-            res.render("resume", {
+            res.render("viewResume", {
                 loggedIn: req.session.loggedIn,
                 loggedInUserData: req.session.loggedInUserData,
                 resumeData: resume,

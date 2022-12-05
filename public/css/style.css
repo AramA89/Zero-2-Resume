@@ -3,19 +3,19 @@
 }
 
 .container {
-  background-image: linear-gradient(
-    rgb(197, 199, 208) 0%,
-    rgb(109, 109, 116) 100%
-  );
+  background-color: white;
   border-radius: 0.5em;
   border: 1px solid black;
 }
 
+.message-body {
+  background-color: white;
+}
+
 .hero {
-  background-image: linear-gradient(rgb(169, 186, 247) 0%, rgb(6, 6, 195) 100%);
+  background-color: #edd2a4;
   border-radius: 0.5em;
   padding-top: 2%;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 #inline_container {
@@ -28,7 +28,6 @@
   text-align: center;
   border-bottom: 1px solid black;
   font-size: 200%;
-  color: whitesmoke;
 }
 
 #dash-head {
@@ -42,28 +41,12 @@ h1 {
   text-align: center;
   text-decoration: none;
   border-bottom: 1.5px solid black;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  font-weight: bold;
 }
 
 #title a {
   text-decoration: none;
-}
-
-#title a:hover {
-  color: rgb(217, 15, 25);
-  font-size: 90%;
-  transition: all 0.3s ease-in-out;
-}
-
-#sum {
-  text-decoration: none;
-  padding-bottom: 3%;
-}
-
-#sum:hover {
-  color: rgb(217, 15, 25);
-  font-size: 90%;
-  transition: all 0.3s ease-in-out;
 }
 
 #h2 {
@@ -79,45 +62,6 @@ h1 {
   padding-bottom: 5%;
 }
 
-#post-image {
-  border: solid 1.5px black;
-  border-radius: 0.5em;
-  box-shadow: 0 10px 5px 0 rgb(52, 52, 54), 0 10px 10px 0 rgb(45, 45, 46);
-}
-
-.custom__image-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.custom__form input {
-  text-align: left;
-}
-
-.custom__image-container label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 150%;
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-  border: solid 1px black;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.custom__image-container img {
-  width: 100px;
-  height: 100px;
-  border: solid 1px black;
-  border-radius: 5px;
-  object-fit: cover;
-  justify-content: center;
-}
-
 body,
 html {
   min-height: 100vh;
@@ -125,66 +69,7 @@ html {
   background-color: #edd2a4;
 }
 
-header {
-  text-align: center;
-  font-size: 40px;
-  color: #5a5a5a;
-}
-
-#homelogo {
-  border-radius: 1em;
-  border: 2px solid black;
-  width: 65%;
-  box-shadow: 0 8px 5px 0 rgb(2, 2, 130), 0 5px 3px 0 rgb(1, 1, 82);
-}
-
-#logo1 {
-  width: 50%;
-  border: solid 1.5px black;
-  border-radius: 0.5em;
-  box-shadow: 0 3px 5px 0 rgb(52, 52, 54), 0 5px 5px 0 rgb(45, 45, 46);
-  margin-left: 10%;
-  margin-bottom: 3%;
-  margin-top: 3%;
-}
-
-#logo2 {
-  width: 30%;
-  border: solid 1.5px black;
-  border-radius: 0.5em;
-  box-shadow: 0 10px 5px 0 rgb(52, 52, 54), 0 10px 10px 0 rgb(45, 45, 46);
-}
-
-#navirow {
-  box-shadow: 0 8px 5px 0 rgb(2, 2, 130), 0 5px 3px 0 rgb(1, 1, 82);
-  border-bottom: solid 1.5px black;
-  background-color: whitesmoke;
-  border-radius: 0.5em;
-  border: 1px solid black;
-  margin-bottom: 2.5%;
-}
-
-#navbarMenu {
-  margin-bottom: 2.5%;
-  width: 100%;
-}
-
-#navbarMenu a {
-  border-radius: 0.5em;
-  border: solid 1px black;
-  background-image: linear-gradient(
-    rgb(235, 237, 244) 0%,
-    rgb(65, 65, 69) 100%
-  );
-  font-weight: bold;
-  color: black;
-  margin: 2.5%;
-  margin-top: 10%;
-  font-size: 110%;
-}
-
 #navbarMenu a:hover {
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
   font-size: 90%;
   transition: all 0.3s ease-in-out;
   color: whitesmoke;
@@ -192,38 +77,35 @@ header {
 
 #login-btn:hover {
   font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
   transition: all 0.3s ease-in-out;
 }
 
 #signup-btn:hover {
   font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
 .signup-button:hover {
   font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
   transition: all 0.3s ease-in-out;
 }
 
 #table-dash {
-  width: 100%;
+  width: auto;
 }
 
 #dash-box {
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
 }
 
 #dash-table {
   text-align: center;
   font-size: 115%;
   font-weight: bold;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px solid black;
 }
 
 #table-head {
@@ -236,47 +118,29 @@ header {
 #table-row {
   text-align: center;
   font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px dashed black;
-  border-right: 1px dashed black;
-  border-left: 1px dashed black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+a {
+  padding: 10px 10px 10px 10px;
+}
+
+#editt {
+  padding: 10px 10px 10px 10px;
 }
 
 td {
-  border-left: 1px dashed black;
+  border-left: 1px solid black;
 }
 
 #delete:hover {
-  background-color: rgb(177, 178, 189);
+  background-color: #edd2a4;
 }
 
 #editt:hover {
-  background-color: rgb(177, 178, 189);
-}
-
-.table-id {
-  width: 10%;
-}
-
-.table-title {
-  width: auto;
-}
-
-.table-created {
-  width: 25%;
-}
-
-.table-author {
-  width: 15%;
-}
-
-.table-edit {
-  width: 10%;
-}
-
-.table-delete {
-  width: 12%;
+  background-color: #edd2a4;
 }
 
 #edit-submit {
@@ -286,47 +150,8 @@ td {
 
 #edit-submit:hover {
   font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+  background-color: #edd2a4;
   transition: all 0.3s ease-in-out;
-}
-
-#submit-post {
-  font-weight: bold;
-  border: 1px solid black;
-}
-
-#submit-post:hover {
-  font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
-  transition: all 0.3s ease-in-out;
-}
-
-#comment-submit {
-  margin-top: 5%;
-  font-weight: bold;
-  border: 1px solid black;
-}
-
-#comment-submit:hover {
-  font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
-  transition: all 0.3s ease-in-out;
-}
-
-#dash-submit {
-  font-weight: bold;
-  border: 1px solid black;
-}
-
-#dash-submit:hover {
-  font-size: 85%;
-  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
-  transition: all 0.3s ease-in-out;
-}
-
-#delete-comment {
-  font-size: 125%;
-  text-decoration: none;
 }
 
 #delete-comment:hover {
@@ -348,15 +173,6 @@ td {
   text-decoration: none;
 }
 
-.footer-container {
-}
-
-@media screen and (min-width: 1000px) {
-  .footer-container {
-    position: absolute;
-  }
-}
-
 .navitem {
   text-align: center;
   box-shadow: 5px 5px 5px;
@@ -373,4 +189,11 @@ td {
   margin: 5px;
   box-shadow: black 5px 5px 15px;
   font-weight: bold;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .footer-container {
+    position: absolute;
+  }
 }

@@ -6,10 +6,17 @@ const { Resume } = require("../../models");
 router.post("/", async (req, res) => {
     try {
         const dbResumeData = await Resume.create({
-            contactInfo: req.body.contactInfo,
-            education: req.body.education,
-            workExperience: req.body.workExperience,
-            skills: req.body.skills,
+            name: req.body.name,
+            phone: req.body.phone,
+            email: req.body.email,
+            github: req.body.github,
+            school: req.body.school,
+            degree: req.body.degree,
+            employer: req.body.employer,
+            dates_worked: req.body.dates_worked,
+            skill_1: req.body.skill_1,
+            skill_2: req.body.skill_2,
+            skill_3: req.body.skill_3,
             summary: req.body.summary,
             user_id: req.body.user_id,
         });

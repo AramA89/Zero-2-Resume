@@ -1,113 +1,111 @@
 <section class="hero">
-    <div class="hero-body">
-        <div class="container">
-             <label class="label is-large" id="addpost" class="label">Create New Resume ⌨️</label>
-            <div class="columns is-centered">
-                <div class="column">
-                    <form class="box">
-                        <label class="label" style="border-bottom: 1px dashed black">Contact Information 🗃️</label>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="name" type="text" placeholder="Enter your name here..." 
-                                class="input contact-input" />
-                            </div>
-                            <label for="name">Name</label>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="phone" type="text" placeholder="Enter phone-number here..." 
-                                class="input contact-input" />
-                            </div>
-                            <label for="phone">Phone Number:</label>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="email" type="text" placeholder="Enter email here..." 
-                                class="input contact-input" />
-                            </div>
-                            <label for="email">Email:</label>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="github" type="text" placeholder="Enter GitHUB here..." 
-                                class="input contact-input" />
-                            </div>
-                            <label for="github">GitHUB:</label>
-                        </div>
-                        <label class="label" style="border-bottom: 1px dashed black">Education 🗃️</label>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="school" type="text" placeholder="Enter school name here..." 
-                                class="input education-input" />
-                            </div>
-                            <label for="school">School Name:</label>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="degree" type="text" placeholder="Enter degree info here..." 
-                                class="input education-input" />
-                            </div>
-                            <label for="degree">Degree:</label>
-                        </div>
-                        <label class="label" style="border-bottom: 1px dashed black">Work Experience 🗃️</label>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="employer" type="text" placeholder="Enter employer info here..." 
-                                class="input work-input" />
-                            </div>
-                            <label for="employer">Employer:</label>
-                        </div>
-                        <div class="field">
-                            <div class="control">
-                               <div class="control" style="margin-top: 2.5%">
-                                    <input name="dates" type="text" placeholder="Enter employment dates here..." 
-                                class="input work-input" />
-                            </div>
-                            <label for="dates">Dates:</label>
-                        </div>
-                        <label class="label" style="border-bottom: 1px dashed black">Skills 🗃️</label>
-                        <div class="field">
-                            <div class="control">
-                                <div class="control" style="margin-top: 2.5%">
-                                    <input name="skill" type="text" placeholder="Enter skill here..." 
-                                             id="skill-1">
-                                    <input name="skill" type="text" placeholder="Enter skill here..." 
-                                           id="skill-2">
-                                    <input name="skill" type="text" placeholder="Enter skill here..." 
-                                             id="skill-3">
-                                </div>
-                            <label for="skill">Skills:</label>
-                        </div>
-                        <label class="label" style="border-bottom: 1px dashed black">Summary 🗃️</label>
-                       <div class="field-body">
-                            <div class="field" style="margin-top: 3%">
-                                <div class="control">
-                                    <label for="summary" class="label">Summary-Content:</label>
-                                    <textarea
-                                        name="summary"
-                                        id="summary-input"
-                                        placeholder="Enter summary details here...">
-                                    
-                                    </textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field is-grouped is-grouped-right mt-3">
-                            <button id="dash-submit" class="button is-success submit-resume">
-                               Submit 📬
-                            </button>
-                        </div>
-                    </form>
-                </div>
+<div class="hero-body">
+<div class="container">
+<label class="label is-large" id="addpost" class="label">Create New Resume ⌨️</label>
+<div class="columns is-centered">
+<div class="column">
+<form class="box">
+        <div class="field">
+        <label class="label" style="border-bottom: 1px dashed black">Contact Information 🗃️</label>
+            <div class="control">
+                <div class="control" style="margin-top: 2.5%">
+                    <input type="text" name="name" placeholder="Enter your name here..." 
+                        id="name-input" required/>
+            </div>
+                <label for="name" class="label">Name: <i class="fa-solid fa-signature"></i></label>
+            </div>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="phone" placeholder="Enter phone-number here..." 
+            id="phone-input" />
+        </div>
+        <label for="phone" class="label">Phone Number: <i class="fa-solid fa-phone"></i></label>
+    </div>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="email" placeholder="Enter email here..." 
+            id="email-input" />
+        </div>
+        <label for="email" class="label">Email: <i class="fa-solid fa-envelope-circle-check"></i></label>
+    </div>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="github" placeholder="Enter GitHUB here..." 
+            id="github-input" />
+        </div>
+        <label for="github" class="label">GitHUB: <i class="fa-brands fa-github"></i></label>
+    </div>
+    <label class="label" style="border-bottom: 1px dashed black">Education 🗃️</label>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="school" placeholder="Enter school name here..." 
+                id="school-input" />
+        </div>
+        <label for="school" class="label">School Name: <i class="fa-solid fa-graduation-cap"></i></label>
+    </div>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="degree" placeholder="Enter degree info here..." 
+            id="degree-input"/>
+        </div>
+        <label for="degree" class="label">Degree: <i class="fa-solid fa-certificate"></i></label>
+    </div>
+    <label class="label" style="border-bottom: 1px dashed black">Work Experience 🗃️</label>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="employer" placeholder="Enter employer info here..." 
+            id="employer-input" />
+        </div>
+        <label for="employer" class="label">Employer: <i class="fa-solid fa-briefcase"></i></label>
+    </div>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input name="dates-worked" type="text" placeholder="Edit dates of employment..." 
+                id="dates-worked" />
+            </div>
+        <label for="dates-worked" class="label">Dates Employed: <i class="fa-regular fa-clock"></i></label>
+    </div>
+    <label class="label" style="border-bottom: 1px dashed black">Skills 🗃️</label>
+    <div class="field">
+        <div class="control">
+            <div class="control" style="margin-top: 2.5%">
+                <input type="text" name="skill-1" placeholder="Enter skill here..." 
+                            id="skill-1">
+                <input type="text" name="skill-2" placeholder="Enter skill here..." 
+                        id="skill-2">
+                <input type="text" name="skill-3" placeholder="Enter skill here..." 
+                            id="skill-3">
+            </div>
+        <label for="" class="label">Skills: <i class="fa-solid fa-file-csv"></i></label>
+    </div>
+    <label class="label" for="summary-input" style="border-bottom: 1px dashed black">Summary-Content: <i class="fa-regular fa-folder-open"></i></label>
+    <div class="field-body">
+        <div class="field" style="margin-top: 3%">
+            <div class="control">
+                <textarea
+                    name="summary-input"
+                    id="summary-input"
+                    >
+                </textarea>
             </div>
         </div>
     </div>
+    <div class="field is-grouped is-grouped-right mt-3">
+        <button id="dash-submit" class="button is-success submit-resume">
+            Submit 📬
+        </button>
+    </div>
+</form>
+</div>
+</div>
+</div>
+</div>
 </section>
- <script src="/js/addResume.js"></script>
+<script src="/js/addResume.js"></script>

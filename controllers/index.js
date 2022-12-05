@@ -10,7 +10,6 @@ const router = require("express").Router();
     const editRoutes = require("./editRoutes");
     const addResume = require("./addResume");
     const homeRoute = require('./homeRoutes');
-    const viewResumeRoutes = require("./viewResumeRoutes");
 
 //ROUTE --> CONTROLLER//
     router.use("/api", apiRoutes);
@@ -22,6 +21,5 @@ const router = require("express").Router();
     router.use("/edit", editRoutes);
     router.use("/addresume", addResume);
     router.use('/', homeRoute);
-    router.use("/viewresume", viewResumeRoutes);
    
     module.exports = router;

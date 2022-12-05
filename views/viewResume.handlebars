@@ -1,85 +1,76 @@
 <section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column">
-                    <form action="" class="box">
-                        <label style="text-align: center; font-size: 200%; border-bottom: 1px solid black" class="label is-large" for="">
-                        Edit Resume 📝
-                        </label>
-                            <div class="field">
-                                <label style="font-size: 125%" for="" class="label">
-                                    Contact Information 🗃️
-                                </label>
-                                    <div class="control">
-                                        <p name="phone">{{resumeData.contactInfo}}</p>
-                                    <label for="phone" class="label">Phone Number:</label>
-                                        <p name="email">{{resumeData.contactInfo}}</p>
-                                    <label for="email" class="label">Email:</label>
-                                        <p name="github">{{resumeData.contactInfo}}</p>
-                                    <label for="github" class="label">GitHUB:</label>
-                                    </div>
-                                </div>
-                        <div class="field">
-                                <label style="font-size: 125%" for="" class="label">
-                                    Education 🗃️
-                                </label>
-                                    <div class="control">
-                                        <input name="school" type="text"  class="input education-input"
-                                        value="{{resumeData.education}}" />
-                                         <label for="school" class="label">School:</label>
-                                         <input name="degree" type="text"  class="input education-input"
-                                        value="{{resumeData.education}}" />
-                                        <label for="degree" class="label">Degree:</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                <label style="font-size: 125%" for="" class="label">
-                                    Work Experience 🗃️
-                                </label>
-                                    <div class="control">
-                                        <input name="employer" type="text" class="input work-input"
-                                        value="{{resumeData.workExperience}}" />
-                                         <label for="employer" class="label">Employer Info:</label>
-                                         <input name="degree" type="text" class="input work-input"
-                                        value="{{resumeData.workExperience}}" />
-                                        <label for="degree" class="label">Dates Employed:</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                <label style="font-size: 125%" for="" class="label">
-                                    Skills 🗃️
-                                </label>
-                                    <div class="control">
-                                        <input name="skill" type="text"
-                                        value=""/>
-                                         <label for="skill" class="label">Skill: {{resumeData.skill}}</label>
-                                         <input name="skill" type="text" 
-                                        value=""/>
-                                        <label for="skill" class="label">Skill: {{resumeData.skill}}</label>
-                                        <input name="skill" type="text" 
-                                        value=""/>
-                                        <label for="skill" class="label">Skill: {{resumeData.skill}}</label>
-                                    </div>
-                                </div>
-                                <label class="label" style="border-bottom: 1px dashed black">Summary 🗃️</label>
-                       <div class="field-body">
-                            <div class="field" style="margin-top: 3%">
-                                <div class="control">
-                                    <label for="summary" class="label">Summary-Content:</label>
-                                    <textarea
-                                        value="{{resumeData.summary}}"
-                                        name="summary"
-                                        >{{resumeData.summary}}
-                                    </textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+<div class="hero-body">
+<div class="container">
+<div class="columns is-centered">
+<div class="column">
+<form action="" class="box">
+    <label style="text-align: center; font-size: 200%; border-bottom: 1px solid black" class="label is-large" for="">
+    {{loggedInUserData.username}}'s Current Resume
+    </label>
+        <div class="field">
+            <label style="font-size: 125%" for="" class="label">
+                Contact Information 🗃️
+            </label>
+                <div class="control">
+                <label for="name" class="label">Name:  <i class="fa-solid fa-signature"></i></label>
+                    <p name="name">{{resumeData.name}}</p>
+                <label for="phone" class="label">Phone Number: <i class="fa-solid fa-phone"></i></label>
+                    <p name="phone">{{resumeData.phone}}</p>
+                <label for="email" class="label">Email: <i class="fa-solid fa-envelope-circle-check"></i></label>
+                    <p name="email">{{resumeData.email}}</p>
+                <label for="github" class="label">GitHUB: <i class="fa-brands fa-github"></i></label>
+                    <p name="github">{{resumeData.github}}</p>
                 </div>
+            </div>
+    <div class="field">
+            <label style="font-size: 125%" for="" class="label">
+                Education 🗃️
+            </label>
+                <div class="control">
+            <label for="school" class="label">School: <i class="fa-solid fa-graduation-cap"></i></label>
+                <p name="school">{{resumeData.school}}</p>
+            <label for="degree" class="label">Degree:  <i class="fa-solid fa-certificate"></i></label>
+                <p name="degree">{{resumeData.degree}}</p>
+                </div>
+            </div>
+            <div class="field">
+            <label style="font-size: 125%" for="" class="label">
+                Work Experience 🗃️
+            </label>
+                <div class="control">
+            <label for="employer" class="label">Employer Info: <i class="fa-solid fa-briefcase"></i></label>
+                    <p name="employer">{{resumeData.employer}}</p>
+            <label for="dates-worked" class="label">Start Date: <i class="fa-regular fa-clock"></i></label>
+                    <p name="dates-worked">{{resumeData.dates_worked}}</p>
+                </div>
+            </div>
+            <div class="field">
+            <label style="font-size: 125%" for="" class="label">
+                Skills 🗃️
+            </label>
+                <div class="control">
+                    <label for="skill-1" class="label">Skill: <i class="fa-solid fa-file-csv"></i></label>
+                            <p name="skill-1">{{resumeData.skill_1}}</p>
+                    <label for="skill-2" class="label">Skill: <i class="fa-solid fa-file-csv"></i></label>
+                            <p name="skill-2">{{resumeData.skill_2}}</p> 
+                    <label for="skill-3" class="label">Skill: <i class="fa-solid fa-file-csv"></i></label>
+                            <p name="skill-3">{{resumeData.skill_3}}</p>
+                </div>
+            </div>
+            <label class="label" style="border-bottom: 1px dashed black">Summary 🗃️</label>
+    <div class="field-body">
+        <div class="field" style="margin-top: 3%">
+            <div class="control">
+    <label for="summary-input" class="label">Summary-Content: <i class="fa-regular fa-folder-open"></i></label>
+            <p name="summary-input" id="summary-input">{{resumeData.summary}}</p>
             </div>
         </div>
     </div>
+</form>
+</div>
+</div>
+</div>
+</div>
 <div class="current-resume-id is-invisible">{{resumeData.id}}</div>
 </section>
- <script src="/js/viewResume.js"></script>
+<script src="/js/viewResume.js"></script>
