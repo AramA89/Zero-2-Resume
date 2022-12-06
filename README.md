@@ -27,13 +27,17 @@ As a user I want to be able to create a resume, without having the trouble of ha
 
 ## Mock Up
 
-![Alt text](Assets/images/Homepage.jpg)
+![Alt text](Assets/images/homepage.jpg)
 
-![Alt text](Assets/images/Homepage2.jpg)
+![Alt text](Assets/images/homepage2.jpg)
 
 ![Alt text](Assets/images/signup.jpg)
 
 ![Alt text](Assets/images/login.jpg)
+
+![Alt text](Assets/images/dashboard.jpg)
+
+![Alt text](Assets/images/resume.jpg)
 
 ## Heroku
 
