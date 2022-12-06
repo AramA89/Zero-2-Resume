@@ -1,10 +1,17 @@
 [
     {
-        "contactInfo": "test@gmail.com",
-        "education": "UCLA",
-        "workExperience": "Programming",
-        "skills": "coding bootcamp",
-        "summary": "I love tech!",
+        "name": "Aram Ambartsumyan",
+        "phone": "555-777-8888",
+        "email": "test@gmail.com",
+        "github": "agithub.com",
+        "employer": "Google",
+        "dates_worked": "current",
+        "school": "UCLA",
+        "degree": "Coding",
+        "skill_1": "Java",
+        "skill_2": "React",
+        "skill_3": "Node",
+        "summary": "I love Tech!",
         "user_id": "1"
     }
 ]
