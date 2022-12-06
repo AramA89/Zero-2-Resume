@@ -37,5 +37,8 @@ As a user I want to be able to create a resume, without having the trouble of ha
 
 ## Heroku
 
+https://zero-2-resume.herokuapp.com/
 
 ## GitHub Repository
+
+https://github.com/AramA89/Zero-2-Resume
